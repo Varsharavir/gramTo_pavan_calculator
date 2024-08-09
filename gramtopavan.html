@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram to Pavan Converter</title>
+    <link rel="website icon" type="jpg" href="./img/calculator.png">
+
+    <script>
+        function convertToPavan() {
+            const gramInput = parseFloat(document.getElementById('gramInput').value);
+            const pavan = gramInput / 8;
+            document.getElementById('pavanOutput').value = pavan;
+        }
+
+        function convertToGram() {
+            const pavanInput = parseFloat(document.getElementById('pavanInput').value);
+            const gram = pavanInput * 8;
+            document.getElementById('gramOutput').value = gram;
+        }
+    </script>
+    <link rel="stylesheet" href="gramtopavan.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Gram to Pavan Converter</h2>
+        <div class="input-box">
+            <p>Enter grams: <input type="text" id="gramInput"></p>
+        </div>
+
+        <button onclick="convertToPavan()" class="btn">Convert</button>
+        <br>
+
+        <div class="input-box">
+            <p>Value in Pavan: <input type="text" id="pavanOutput"></p>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h2>Pavan to Gram Calculator</h2>
+        <div class="input-box">
+            <p>Enter Pavan:<input type="text" id="pavanInput"></p>
+        </div>
+
+        <button onclick="convertToGram()" class="btn">Convert</button>
+        <br>
+
+        <div class="input-box">
+            <p>Values in gram:<input type="text" id="gramOutput"></p>
+        </div>
+    </div>
+    
+
+
+</body>
+
+</html>
